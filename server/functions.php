@@ -4,6 +4,7 @@ $dbname  = 'u753121368_root';       // Modify these...
 $dbuser  = 'u753121368_root';   // ...variables according
 $dbpass  = 'ke345ohugS';   // ...to your installation
 $appname = "后台管理系统"; // ...and preference
+$firmwaremaxsize = 2000000;
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_connect_errno());
 

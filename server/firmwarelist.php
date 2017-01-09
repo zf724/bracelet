@@ -1,5 +1,5 @@
 <?php
-include 'deviceheader.php';
+include 'firmwareheader.php';
 
 echo <<<END
 
@@ -8,13 +8,14 @@ echo <<<END
         <div class="span2">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="active"><a href="devicelist.php">设备列表</a></li>
+              <li class="active"><a href="firmwarelist.php">固件列表</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span10">
 
 <div class="btn-toolbar">
+    <a class="btn btn-primary" href="firmwareadd.php" >增  加</a>
     <button class="btn">导 出</button>
 </div>
 END;
@@ -25,12 +26,9 @@ echo <<<END
     <table class="table">
       <thead>
         <tr>
-          <th>用户名</th>
-          <th>密码</th>
-          <th>电话</th>
-		  <th>生日</th>
-          <th>体重</th>
-          <th>身高</th>
+          <th>版本号</th>
+          <th>下载地址</th>
+          <th>是否启用</th>
           <th style="width: 36px;"></th>
         </tr>
       </thead>
@@ -39,7 +37,7 @@ END;
 
 
 
-$result = queryMysql(" select name, password, phone, birthday, weight, height from accounts ORDER BY id asc ");
+$result = queryMysql(" select version, url, enabled from firmware ORDER BY version asc ");
 $num    = mysqli_num_rows($result);
 
 for ($j = 0 ; $j < $num ; ++$j)
@@ -51,12 +49,9 @@ for ($j = 0 ; $j < $num ; ++$j)
           <td>$row[0]</td>
           <td>$row[1]</td>
           <td>$row[2]</td>
-          <td>$row[3]</td>
-          <td>$row[4]</td>
-          <td>$row[5]</td>
           <td>
-              <a href="deviceedit.php?name=$row[0]"><i class="icon-pencil"></i></a>
-          	  <a href="devicedelete.php?name=$row[0]"><i class="icon-remove"></i></a>
+              <a href="firmwareedit.php?version=$row[0]"><i class="icon-pencil"></i></a>
+          	  <a href="firmwaredelete.php?version=$row[0]"><i class="icon-remove"></i></a>
               <!--<a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>-->
           </td>
         </tr>

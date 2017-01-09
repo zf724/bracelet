@@ -73,7 +73,7 @@ if ($loggedin)
             </p>-->
              <ul class="nav">
             <li><a href='users.php'>用户管理</a></li>
-            <li class='active'><a href='authorize.php'>权限管理</a></li>
+            <li class='active'><a href='firmwares.php'>固件管理</a></li>
             <li><a href='devices.php'>设备管理</a></li>
             <li><a href='reports.php'>统计管理</a></li>
             </ul>
