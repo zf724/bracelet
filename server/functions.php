@@ -1,8 +1,8 @@
 <?php // Example 21-1: functions.php
 $dbhost  = 'mysql.hostinger.com.hk';    // Unlikely to require changing
-$dbname  = 'u753121368_root';       // Modify these...
-$dbuser  = 'u753121368_root';   // ...variables according
-$dbpass  = 'ke345ohugS';   // ...to your installation
+$dbname  = 'u243319481_root';       // Modify these...
+$dbuser  = 'u243319481_root';   // ...variables according
+$dbpass  = 'rGZ9t4hMAF';   // ...to your installation
 $appname = "后台管理系统"; // ...and preference
 $firmwaremaxsize = 2000000;
 

@@ -6,12 +6,13 @@ if ($link->connect_error) {
     die("连接失败：" . $link->connect_error);
 }
 
-$sql = "SELECT name,password FROM accounts WHERE name='" . $_GET["name"] . "' AND password='" . $_GET["password"] . "'";
+$sql = "SELECT name,password,phone,birthday,weight,height FROM accounts WHERE name='" . $_GET["name"] . "' AND password='" . $_GET["password"] . "'";
 
 $result = $link->query($sql);
 
-if ($result->num_rows > 0) {
-    echo "1";
+if ($row = mysqli_fetch_array($result)) {
+    $arr = array('phone' => $row['phone'], 'birthday' => $row['birthday'],'weight' => $row['weight'], 'height' => $row['height']);
+    echo json_encode($arr);
 } else {
     echo "0";
 }
