@@ -15,7 +15,7 @@ echo <<<END
         <div class="span10">
 
 END;
-
+    redirect('reportlist.php');
 echo <<<END
 
 		<div class="well">

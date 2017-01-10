@@ -19,7 +19,7 @@ END;
 echo <<<END
 
 		<div class="well">
-		<h3>欢迎使用Bracelet后台管理系统！</h3>
+		<h3>设备管理正在建设中……</h3>
 		</div>
 
 END;

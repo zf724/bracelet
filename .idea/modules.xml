@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/hostinger.iml" filepath="$PROJECT_DIR$/.idea/hostinger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bracelet.iml" filepath="$PROJECT_DIR$/.idea/bracelet.iml" />
     </modules>
   </component>
 </project>

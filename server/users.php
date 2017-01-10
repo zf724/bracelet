@@ -17,11 +17,11 @@ echo <<<END
         <div class="span10">
 
 END;
-
+    redirect('userlist.php');
 echo <<<END
 
 		<div class="well">
-		<h3>欢迎使用Bracelet后台管理系统！</h3>
+		<h3>用户管理正在建设中……</h3>
 		</div>
 
 END;
