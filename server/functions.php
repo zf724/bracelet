@@ -5,7 +5,12 @@ if($_SERVER["SERVER_NAME"] == "zf.96.lt"){
     $dbname  = 'u243319481_root';
     $dbuser  = 'u243319481_root';
     $dbpass  = 'rGZ9t4hMAF';
-} else {
+} else if($_SERVER["SERVER_NAME"] == "zf.pe.hu"){
+    $dbhost  = 'mysql.hostinger.com.hk';
+    $dbname  = 'u753121368_root';
+    $dbuser  = 'u753121368_root';
+    $dbpass  = 'rGZ9t4hMAF';
+} else{
     $dbhost  = '127.0.0.1';
     $dbname  = 'bracelet';
     $dbuser  = 'root';

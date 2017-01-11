@@ -2,7 +2,7 @@
 RewriteBase /
 
 order deny,allow
-<Files ~ "^.(htaccess|htpasswd)$">
+<Files ~ "^(.htaccess|manage.sql|README.md)$">
 deny from all
 </Files>
 
