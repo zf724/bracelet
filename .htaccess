@@ -8,5 +8,8 @@ deny from all
 
 DirectoryIndex index.html       
 Redirect temp /index.html /server/users.php
+
+ErrorDocument 403 /server/404.php
 ErrorDocument 404 /server/404.php
+ErrorDocument 503 /server/404.php
 
