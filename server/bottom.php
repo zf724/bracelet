@@ -8,7 +8,15 @@ echo <<<END
       <hr/>
 
       <footer>
-        <p> Copyright &copy; 2016 欧乾 All Rights Reserved.</p>
+        <p> Copyright &copy; 2016 欧乾 All Rights Reserved.
+
+END;
+
+    echo $ad;
+
+echo <<<END
+
+        </p>
       </footer>
 
     </div><!--/.fluid-container-->

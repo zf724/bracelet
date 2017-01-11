@@ -5,16 +5,23 @@ if($_SERVER["SERVER_NAME"] == "zf.96.lt"){
     $dbname  = 'u243319481_root';
     $dbuser  = 'u243319481_root';
     $dbpass  = 'rGZ9t4hMAF';
+    $ad = "<a href='http://api.hostinger.com.hk/redir/21005134' target='_blank'> 
+            <img src='http://www.hostinger.com.hk/banners/cn/hostinger-80x15-powered-1.gif' alt='虚拟主机' align='right' border='0' width='80' height='15' />
+        </a>";
 } else if($_SERVER["SERVER_NAME"] == "zf.pe.hu"){
     $dbhost  = 'mysql.hostinger.com.hk';
     $dbname  = 'u753121368_root';
     $dbuser  = 'u753121368_root';
     $dbpass  = 'rGZ9t4hMAF';
+    $ad = "<a href='http://api.hostinger.com.hk/redir/21005134' target='_blank'> 
+            <img src='http://www.hostinger.com.hk/banners/cn/hostinger-80x15-powered-1.gif' alt='虚拟主机' align='right' border='0' width='80' height='15' />
+        </a>";
 } else{
     $dbhost  = '127.0.0.1';
     $dbname  = 'bracelet';
     $dbuser  = 'root';
     $dbpass  = 'root';
+    $ad = "";
 }
 
 $appname = "后台管理系统"; //
