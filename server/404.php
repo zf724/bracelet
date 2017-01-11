@@ -10,7 +10,6 @@ echo <<<END
     <title>页面不存在</title>
 </head>
 <body>
-<>
 <script type="text/javascript"
         src="http://www.qq.com/404/search_children.js"
         charset="utf-8"
