@@ -1,9 +1,18 @@
 <?php // Example 21-1: functions.php
-$dbhost  = 'mysql.hostinger.com.hk';    // Unlikely to require changing
-$dbname  = 'u243319481_root';       // Modify these...
-$dbuser  = 'u243319481_root';   // ...variables according
-$dbpass  = 'rGZ9t4hMAF';   // ...to your installation
-$appname = "后台管理系统"; // ...and preference
+
+if($_SERVER["SERVER_NAME"] == "zf.96.lt"){
+    $dbhost  = 'mysql.hostinger.com.hk';
+    $dbname  = 'u243319481_root';
+    $dbuser  = 'u243319481_root';
+    $dbpass  = 'rGZ9t4hMAF';
+} else {
+    $dbhost  = '127.0.0.1';
+    $dbname  = 'bracelet';
+    $dbuser  = 'root';
+    $dbpass  = 'root';
+}
+
+$appname = "后台管理系统"; //
 $firmwaremaxsize = 2000000;
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_connect_errno());
