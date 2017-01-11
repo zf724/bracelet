@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="php@fa019a26-1e5c-4172-a382-dadd631d9f00">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/data/web/html/bracelet" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>
