@@ -1,5 +1,13 @@
 # Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
 RewriteBase /
 
+order deny,allow
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
 DirectoryIndex index.html       
 Redirect temp /index.html /server/users.php
+ErrorDocument 404 /server/404.php
+ErrorDocument 404 /server/404.php
+
