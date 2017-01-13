@@ -40,12 +40,10 @@ echo <<<END
 END;
 
 
-
 $result = queryMysql(" select account,remark,email,status from user ORDER BY account asc ");
-$num    = mysqli_num_rows($result);
+$num = mysqli_num_rows($result);
 
-for ($j = 0 ; $j < $num ; ++$j)
-{
+for ($j = 0; $j < $num; ++$j) {
     $row = mysqli_fetch_row($result);
 
     echo <<<END
@@ -55,13 +53,12 @@ for ($j = 0 ; $j < $num ; ++$j)
           <td>$row[2]</td>
           <td>$row[3]</td>
           <td>
-              <a href="useredit.php?account=$row[0]"><i class="icon-pencil"></i></a>
-          	  <a href="userdelete.php?account=$row[0]"><i class="icon-remove"></i></a>
-              <!--<a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>-->
+              <a href="useredit.php?account=$row[0]"><i class="icon-pencil"></i></a>            
+              <a href="javascript:void(0)" onclick="ConfirmDel('$row[0]')"><i class="icon-remove"></i></a>
           </td>
         </tr>
 END;
-    
+
 }
 
 
@@ -90,9 +87,18 @@ echo <<<END
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" data-dismiss="modal">删除</button>
+        <button class="btn btn-danger" data-dismiss="modal" onclick="deleteItem()">删除</button>
     </div>
 </div>
+<script>
+    function ConfirmDel(item){
+		$('#myModal').val(item);
+		$('#myModal').modal('show');
+	}
+	function deleteItem(){
+	    location.href = "userdelete.php?account=" + $('#myModal').val();
+	}
+</script>
 
 END;
 

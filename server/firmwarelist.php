@@ -51,8 +51,7 @@ for ($j = 0 ; $j < $num ; ++$j)
           <td>$row[2]</td>
           <td>
               <a href="firmwareedit.php?version=$row[0]"><i class="icon-pencil"></i></a>
-          	  <a href="firmwaredelete.php?version=$row[0]"><i class="icon-remove"></i></a>
-              <!--<a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>-->
+              <a href="javascript:void(0)" onclick="ConfirmDel('$row[0]')"><i class="icon-remove"></i></a>
           </td>
         </tr>
 END;
@@ -81,13 +80,22 @@ echo <<<END
         <h3 id="myModalLabel">确认</h3>
     </div>
     <div class="modal-body">
-        <p class="error-text">您确认删除这个用户吗?</p>
+        <p class="error-text">您确认删除这个固件版本吗?</p>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" data-dismiss="modal">删除</button>
+        <button class="btn btn-danger" data-dismiss="modal" onclick="deleteItem()">删除</button>
     </div>
 </div>
+<script>
+    function ConfirmDel(item){
+		$('#myModal').val(item);
+		$('#myModal').modal('show');
+	}
+	function deleteItem(){
+	    location.href = "firmwaredelete.php?version=" + $('#myModal').val();
+	}
+</script>
 
 END;
 

@@ -9,6 +9,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="phpstudy">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="bracelet" />
     <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
