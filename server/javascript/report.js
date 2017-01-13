@@ -32,7 +32,7 @@ function bar(Data)
         {
             name : 'Weight',
             value:flow,
-            color:'#1f7e92',
+            color:'#219f18',
             line_width:2
         }
     ];
@@ -42,15 +42,15 @@ function bar(Data)
         data: data,
         align:'center',
         title : {
-            text:'设备用户信息一览图',
+            text:'设备用户信息折线图',
             font : '微软雅黑',
             fontsize:24,
-            color:'#b4b4b4'
+            color:'#333333'
         },
         subtitle : {
-            text:'体重变化趋势',
+            text:'（体重变化趋势）',
             font : '微软雅黑',
-            color:'#b4b4b4'
+            color:'#333333'
         },
         footnote : {
             text:'oqsmart.com.cn',
@@ -58,7 +58,7 @@ function bar(Data)
             fontsize:11,
             fontweight:600,
             padding:'0 28',
-            color:'#b4b4b4'
+            color:'#333333'
         },
         width : 800,
         height : 400,
@@ -67,7 +67,7 @@ function bar(Data)
         shadow_blur : 8,
         shadow_offsetx : 0,
         shadow_offsety : 0,
-        background_color:'#f6f9fa',
+        background_color:'#f5f5f5',
         animation : true,//开启过渡动画
         animation_duration:600,//600ms完成动画
         tip:{
@@ -76,8 +76,8 @@ function bar(Data)
             listeners:{
                 //tip:提示框对象、name:数据名称、value:数据值、text:当前文本、i:数据点的索引
                 parseText:function(tip,name,value,text,i){
-                    return "<span style='color:#005268;font-size:12px;'>"+labels[i]+"体重约:<br/>"+
-                        "</span><span style='color:#005268;font-size:20px;'>"+value+"公斤</span>";
+                    return "<span style='color:#0039c1;font-size:12px;'>"+labels[i]+"体重约:<br/>"+
+                        "</span><span style='color:#0039c1;font-size:20px;'>"+value+"公斤</span>";
                 }
             }
         },
@@ -96,9 +96,9 @@ function bar(Data)
             width:640,
             height:260,
             striped_factor : 0.18,
-            grid_color:'#4e4e4e',
+            grid_color:'#dddddd',
             axis:{
-                color:'#000000',
+                color:'#dddddd',
                 width:[0,0,4,4]
             },
             scale:[{
@@ -108,11 +108,11 @@ function bar(Data)
                 scale_space:10,
                 scale_size:2,
                 scale_enable : false,
-                label : {color:'#9d987a',font : '微软雅黑',fontsize:11,fontweight:600},
-                scale_color:'#9f9f9f'
+                label : {color:'#333333',font : '微软雅黑',fontsize:11,fontweight:600},
+                scale_color:'#333333'
             },{
                 position:'bottom',
-                label : {color:'#9d987a',font : '微软雅黑',fontsize:11,fontweight:600},
+                label : {color:'#333333',font : '微软雅黑',fontsize:11,fontweight:600},
                 scale_enable : false,
                 labels:labels
             }]
@@ -131,9 +131,9 @@ function bar(Data)
             chart.target.textAlign('start')
                 .textBaseline('bottom')
                 .textFont('600 11px 微软雅黑')
-                .fillText('体重(公斤)',x-40,y-12,false,'#0039c1')
+                .fillText('体重(公斤)',x-40,y-12,false,'#333333')
                 .textBaseline('top')
-                .fillText('(用户)',x+w+12,y+h+10,false,'#0039c1');
+                .fillText('(用户)',x+w+12,y+h+10,false,'#333333');
 
         }
     }));
