@@ -51,13 +51,6 @@ CREATE TABLE IF NOT EXISTS `firmware` (
   UNIQUE KEY `version` (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='固件下载';
 
--- 正在导出表  bracelet.firmware 的数据：~2 rows (大约)
-/*!40000 ALTER TABLE `firmware` DISABLE KEYS */;
-INSERT INTO `firmware` (`version`, `url`, `enabled`) VALUES
-	('1.01', 'http://192.168.1.59/firmware/1.bin', 1),
-	('1.02', 'http://192.168.1.59/firmware/2.bin', 1);
-/*!40000 ALTER TABLE `firmware` ENABLE KEYS */;
-
 -- 导出  表 bracelet.user 结构
 CREATE TABLE IF NOT EXISTS `user` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -73,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- 正在导出表  bracelet.user 的数据：2 rows
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `account`, `password`, `email`, `remark`, `status`) VALUES
-	(1, 'admin', '1111', 'bruce-vip@qq.com', 'admin', 1),
+	(1, 'admin', '1111', 'zf@oqsmart.com.cn', 'admin', 1),
 	(56, 'zf', 'zf', '1@2.c', ' gggg', 1);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
