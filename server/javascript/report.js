@@ -12,7 +12,6 @@ var getdatafromDB = function(){
             alert('Error loading XML document');
         },
         success:function(data){
-            console.info(data);
             bar(data);
         }
     });
