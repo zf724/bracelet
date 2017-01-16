@@ -16,8 +16,10 @@ if($_SERVER["SERVER_NAME"] == "zf.pe.hu"){
     $ad = "";
 }
 
-$appname = "后台管理系统"; //
+$appname = "后台管理系统";
 $firmwaremaxsize = 2000000;
+$maxitemonepage = 20;
+$maxshowpage = 4;
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die(mysqli_connect_errno());
 
