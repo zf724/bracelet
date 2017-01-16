@@ -9,7 +9,6 @@ echo <<<END
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">用户管理</li>
-              <li><a href="usercreate.php">新建用户</a></li>
               <li class="active"><a href="userlist.php">用户列表</a></li>
             </ul>
           </div><!--/.well -->
@@ -17,9 +16,11 @@ echo <<<END
         <div class="span10">
 
 <div class="btn-toolbar">
-    <a class="btn btn-primary" href="usercreate.php" >新 建</a>
+    <a class="btn btn-primary" href="usercreate.php">增  加</a>
+<!--
     <button class="btn">导 入</button>
     <button class="btn">导出</button>
+-->
 </div>
 END;
 

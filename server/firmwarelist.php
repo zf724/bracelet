@@ -16,7 +16,7 @@ echo <<<END
 
 <div class="btn-toolbar">
     <a class="btn btn-primary" href="firmwareadd.php" >增  加</a>
-    <button class="btn">导 出</button>
+    <!-- button class="btn">导 出</button -->
 </div>
 END;
 

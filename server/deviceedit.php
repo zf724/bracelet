@@ -8,7 +8,7 @@ echo <<<END
         <div class="span2">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="active"><a href="devicelist.php">用户列表</a></li>
+              <li class="active"><a href="devicelist.php">设备列表</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

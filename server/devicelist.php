@@ -15,7 +15,7 @@ echo <<<END
         <div class="span10">
 
 <div class="btn-toolbar">
-    <button class="btn">导 出</button>
+    <a class="btn btn-primary" href="deviceexportapi.php">导 出</a>
 </div>
 END;
 
