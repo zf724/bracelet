@@ -1,6 +1,6 @@
 <?php // Example 21-1: functions.php
 
-if($_SERVER["SERVER_NAME"] == "oqsmart.com.cn"){
+if($_SERVER["SERVER_NAME"] == "bracelet.oqsmart.com.cn"){
     $dbhost  = 'mysql.hostinger.com.hk';
     $dbname  = 'u121377160_root';
     $dbuser  = 'u121377160_root';
