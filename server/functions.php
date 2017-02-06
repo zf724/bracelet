@@ -2,8 +2,8 @@
 
 if($_SERVER["SERVER_NAME"] == "oqsmart.com.cn"){
     $dbhost  = 'mysql.hostinger.com.hk';
-    $dbname  = 'u363592207_root';
-    $dbuser  = 'u363592207_root';
+    $dbname  = 'u121377160_root';
+    $dbuser  = 'u121377160_root';
     $dbpass  = 'rGZ9t4hMAF';
     $ad = "<a href='http://api.hostinger.com.hk/redir/21005134' target='_blank'> 
             <img src='http://www.hostinger.com.hk/banners/cn/hostinger-80x15-powered-1.gif' alt='虚拟主机' align='right' border='0' width='80' height='15' />
