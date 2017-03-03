@@ -46,6 +46,10 @@ if (isset ( $_POST ['version'] ) && isset ( $_POST ['enabled']))
                  move_uploaded_file($_FILES["file"]["tmp_name"], "../firmware/" . $_FILES["file"]["name"]);
 
                  $url= 'http://' . $_SERVER['HTTP_HOST'] . '/firmware/' . $_FILES["file"]["name"];
+
+                 if ($enabled == '1'){
+                     queryMysql ( "UPDATE firmware SET enabled=0 WHERE enabled=1" );
+                 }
                  queryMysql ( "INSERT INTO firmware(version, url, enabled) VALUES('$version','$url','$enabled') " );
                  $error = "新增固件成功";
                  redirect('firmwarelist.php');

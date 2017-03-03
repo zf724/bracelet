@@ -16,10 +16,12 @@ if ($result->num_rows > 0) {
     $sql = "INSERT INTO accounts (name, password, phone, birthday, weight, height) VALUES ('" . $_GET["name"] . "', '" . $_GET["password"] . "', " . $_GET["phone"] . ", " . $_GET["birthday"] . ", " . $_GET["weight"] . ", " . $_GET["height"] . ")";
 
     if ($link->query($sql) == TRUE) {
-        echo "1";
+        $arr = array('result' => 1);
+        echo json_encode($arr);
     } else {
         //echo "Error: " . $sql . "<br>" . $conn->error;
-        echo "0";
+        $arr = array('result' => 0);
+        echo json_encode($arr);
     }
 }
 $link->close();

@@ -9,11 +9,15 @@ if ($link->connect_error) {
 $sql = "SELECT version, url FROM firmware WHERE enabled=1";
 
 $result = mysqli_query($link, $sql);
+$row = mysqli_fetch_array($result);
 
-while($row = mysqli_fetch_array($result))
+if($row)
 {
-    $arr = array('version' => $row['version'], 'url' => $row['url']);
+    $arr = array('result' => 1, 'version' => $row['version'], 'url' => $row['url']);
     echo json_encode($arr);	
+}else{
+    $arr = array('result' => 0);
+    echo json_encode($arr);
 }
 
 $link->close();

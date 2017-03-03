@@ -46,6 +46,9 @@ if (isset($_POST['version']))
                 move_uploaded_file($_FILES["file"]["tmp_name"], "../firmware/" . $_FILES["file"]["name"]);
 
                 $url= 'http://' . $_SERVER['HTTP_HOST'] . '/firmware/' . $_FILES["file"]["name"];
+                if ($enabled == '1'){
+                    queryMysql ( "UPDATE firmware SET enabled=0 WHERE enabled=1" );
+                }
                 queryMysql ( "UPDATE firmware set version = '$version',url = '$url',enabled='$enabled' where version = '$version' " );
                 $error = "固件修改成功";
             }

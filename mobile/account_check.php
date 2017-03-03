@@ -11,10 +11,11 @@ $sql = "SELECT name,password,phone,birthday,weight,height FROM accounts WHERE na
 $result = $link->query($sql);
 
 if ($row = mysqli_fetch_array($result)) {
-    $arr = array('phone' => $row['phone'], 'birthday' => $row['birthday'],'weight' => $row['weight'], 'height' => $row['height']);
+    $arr = array('result' => 1, 'phone' => $row['phone'], 'birthday' => $row['birthday'],'weight' => $row['weight'], 'height' => $row['height']);
     echo json_encode($arr);
 } else {
-    echo "0";
+    $arr = array('result' => 0);
+    echo json_encode($arr);
 }
 $link->close();
 ?>
